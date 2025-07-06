@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Heart, Mountain, Waves, Baby, Hotel, Camera, Star, ArrowRight } from 'lucide-react';
 
 export default function FamilyHolidays() {
@@ -30,7 +31,7 @@ export default function FamilyHolidays() {
     {
       icon: <Hotel className="w-6 h-6" />,
       title: "Handpicked Stays",
-      description: "Resorts with kids' clubs, villas with private chefs, houseboats, heritage homes",
+      description: "Resorts with kids&apos; clubs, villas with private chefs, houseboats, heritage homes",
       color: "from-orange-500 to-amber-400"
     },
     {
@@ -75,7 +76,7 @@ export default function FamilyHolidays() {
             </div>
           </div>
           <p className="text-xl text-pink-100 leading-relaxed max-w-4xl">
-            Family time is sacred, and we design holidays that feel effortless, exciting, and full of laughter. Whether you're a couple, a large joint family, or a parent planning a surprise, we offer fully customizable itineraries across India and abroad.
+            Family time is sacred, and we design holidays that feel effortless, exciting, and full of laughter. Whether you&apos;re a couple, a large joint family, or a parent planning a surprise, we offer fully customizable itineraries across India and abroad.
           </p>
         </div>
         
@@ -133,13 +134,13 @@ export default function FamilyHolidays() {
 
         {/* CTA Section */}
         <div className="mt-8 text-center">
-          <a 
+          <Link 
             href="/tours"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-600 via-rose-600 to-red-600 text-white font-bold py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 no-underline"
           >
             Plan Family Holiday
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from 'next/image';
 import { X, ExternalLink, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Heart } from 'lucide-react';
 
 export default function Footer() {
@@ -18,10 +19,12 @@ export default function Footer() {
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="relative">
-                  <img
+                  <Image
                     src="/atlaslogo.jpg"
                     alt="Atlas Logo"
-                    className="w-10 h-10 object-contain rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                    width={40}
+                    height={40}
+                    className="object-contain rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
@@ -36,7 +39,7 @@ export default function Footer() {
                 <h3 className="text-xl font-bold">Atlas Hoppers</h3>
               </div>
               <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                We specialize in delivering exceptional travel services. Whether you're looking for adventure, relaxation, or a bit of both, we have the perfect solution for you.
+                We specialize in delivering exceptional travel services. Whether you&apos;re looking for adventure, relaxation, or a bit of both, we have the perfect solution for you.
               </p>
               <div className="flex items-center space-x-2 text-[#f5c624] text-sm">
                 <Heart className="w-4 h-4" />
@@ -304,7 +307,7 @@ export default function Footer() {
                   </div>
 
                   <div className="mt-6">
-                    <h3 className="text-lg font-semibold text-[#03263a] mb-3">Women's Safety & Security</h3>
+                    <h3 className="text-lg font-semibold text-[#03263a] mb-3">Women&apos;s Safety & Security</h3>
                     <div className="bg-pink-50 border border-pink-200 rounded-lg p-4">
                       <p className="font-medium text-[#03263a] mb-2">Our Commitment:</p>
                       <ul className="space-y-1 text-sm text-gray-700 ml-4">

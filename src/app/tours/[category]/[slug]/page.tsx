@@ -6,6 +6,7 @@ import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useState, useRef } from 'react';
+import Image from 'next/image';
 
 const listVariant = {
   hidden: { opacity: 0, y: 20 },
@@ -47,7 +48,7 @@ export default function TourDetailPage() {
           <span className="text-white text-2xl">🗺️</span>
         </div>
         <h1 className="text-2xl font-bold text-[#013319] mb-2">Tour not found</h1>
-        <p className="text-gray-600">The tour you're looking for doesn't exist.</p>
+        <p className="text-gray-600">The tour you&apos;re looking for doesn&apos;t exist.</p>
       </div>
     </div>
   );
@@ -62,10 +63,12 @@ export default function TourDetailPage() {
           style={{ y: heroY, opacity: heroOpacity }}
           className="absolute inset-0"
         >
-          <img
+          <Image
             src={tour.imageGallery[selectedImage]}
             alt={tour.title}
-            className="object-cover w-full h-full transition-all duration-700 ease-out"
+            fill
+            className="object-cover transition-all duration-700 ease-out"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
         </motion.div>
@@ -150,11 +153,12 @@ export default function TourDetailPage() {
                     className="group cursor-pointer"
                     onClick={() => setSelectedImage(i)}
                   >
-                    <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-500">
-                      <img
+                    <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-500 h-56">
+                      <Image
                         src={src}
                         alt={`Tour image ${i + 1}`}
-                        className="object-cover h-56 w-full group-hover:scale-110 transition-transform duration-700"
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <span className="text-white font-medium">View Image</span>
@@ -219,7 +223,7 @@ export default function TourDetailPage() {
                     <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-green-600 rounded-xl flex items-center justify-center">
                       <span className="text-white text-lg">✓</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-emerald-800">What's Included</h3>
+                    <h3 className="text-2xl font-bold text-emerald-800">What&apos;s Included</h3>
                   </div>
                   <ul className="space-y-4">
                     {tour.inclusions.map((item, i) => (
@@ -303,6 +307,7 @@ export default function TourDetailPage() {
                 <motion.a
                   href={`https://wa.me/918805948784?text=I'm%20interested%20in%20the%20${encodeURIComponent(tour.title)}%20tour!`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onMouseEnter={() => setIsBookingHovered(true)}

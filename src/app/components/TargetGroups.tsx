@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { GraduationCap, Building2, Heart, Users, Sparkles, ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { ReactElement } from 'react';
-import type { JSX } from "react";
 
 interface GroupItem {
   title: string;

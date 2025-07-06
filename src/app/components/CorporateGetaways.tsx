@@ -78,7 +78,7 @@ export default function CorporateGetaways() {
             </div>
           </div>
           <p className="text-xl text-green-100 leading-relaxed max-w-4xl">
-            Take your team out for more than just a break. Atlas Hoppers' corporate getaways focus on culture, creativity, and connectivity. We turn destinations into dynamic hubs for growth, wellness, and collective momentum.
+            Take your team out for more than just a break. Atlas Hoppers&apos; corporate getaways focus on culture, creativity, and connectivity. We turn destinations into dynamic hubs for growth, wellness, and collective momentum.
           </p>
         </div>
         
@@ -97,7 +97,7 @@ export default function CorporateGetaways() {
         <div className="mb-12">
           <h3 className="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-3">
             <div className="w-8 h-8 bg-gradient-to-r from-green-600 to-teal-600 rounded-lg"></div>
-            What's Included
+            What&apos;s Included
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {inclusions.map((item, index) => (

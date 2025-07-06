@@ -141,9 +141,9 @@ export default function AboutHero() {
               variants={itemVariants}
               className="text-center mb-12"
             >
-              <p className="text-xl md:text-2xl leading-relaxed text-gray-700 font-medium max-w-4xl mx-auto">
-                At <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Atlas</span>, we believe travel isn't just about visiting places—it's about creating
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 font-bold"> magical stories</span> that last a lifetime. Our mission is to connect people with cultures, nature, and unforgettable moments around the globe.
+              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
+                At <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">Atlas</span>, we believe travel isn&apos;t just about visiting places—it&apos;s about creating
+                <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600"> magical stories</span> that last a lifetime. Founded by passionate travelers who understand the transformative power of exploration, we&apos;ve dedicated ourselves to crafting extraordinary journeys that connect you with the world&apos;s most incredible destinations and cultures.
               </p>
             </motion.div>
 
@@ -199,22 +199,22 @@ export default function AboutHero() {
             </motion.div>
 
             {/* Call to action */}
-          <motion.div
-            variants={itemVariants}
-            className="text-center mt-12"
-          >
-            <motion.a
-              href="/tours"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 no-underline"
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: "0 20px 40px rgba(0,0,0,0.2)"
-              }}
-              whileTap={{ scale: 0.98 }}
+            <motion.div
+              variants={itemVariants}
+              className="text-center mt-12"
             >
-              Start Your Journey
-            </motion.a>
-          </motion.div>
+              <motion.a
+                href="/tours"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 no-underline"
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.2)"
+                }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Start Your Journey
+              </motion.a>
+            </motion.div>
           </div>
         </motion.div>
       </motion.div>

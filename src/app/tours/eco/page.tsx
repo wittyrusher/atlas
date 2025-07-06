@@ -1,7 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import TourCard from '../../components/TourCard'; // Import your shared component
@@ -13,7 +11,7 @@ export default function EcoToursPage() {
       <main className="px-6 py-12">
         <h1 className="text-3xl font-bold mb-6 text-center">Explore Eco Tours</h1>
         <p className="text-center max-w-2xl mx-auto text-lg mb-12">
-          Sustainable travel experiences that connect you with India's rich wildlife, forests, and nature reserves.
+          Sustainable travel experiences that connect you with India&apos;s rich wildlife, forests, and nature reserves.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <TourCard 
@@ -54,7 +52,7 @@ export default function EcoToursPage() {
           />
           <TourCard 
             title="Kaziranga Wildlife Safari"
-            description="Spot the famous one-horned rhinos in Assam’s Kaziranga National Park."
+            description="Spot the famous one-horned rhinos in Assam's Kaziranga National Park."
             link="/tours/eco/kaziranga"
             image="/imagesatlas/ecoatlas/kaziranga.jpeg"
           />
@@ -66,7 +64,7 @@ export default function EcoToursPage() {
           />
           <TourCard 
             title="Gorumara Wildlife Safari"
-            description="Discover rich flora and fauna in West Bengal’s Gorumara National Park."
+            description="Discover rich flora and fauna in West Bengal's Gorumara National Park."
             link="/tours/eco/gorumara"
             image="/imagesatlas/ecoatlas/gorumara.jpeg"
           />
@@ -84,7 +82,7 @@ export default function EcoToursPage() {
           />
           <TourCard 
             title="Gir Lion Safari"
-            description="Get up close with Asiatic lions in Gujarat’s Gir National Park."
+            description="Get up close with Asiatic lions in Gujarat's Gir National Park."
             link="/tours/eco/gir"
             image="/imagesatlas/ecoatlas/gir.jpeg"
           />

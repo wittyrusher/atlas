@@ -1,7 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import TourCard from '../../components/TourCard';
@@ -13,7 +11,7 @@ export default function DomesticPage() {
       <main className="px-6 py-12">
         <h1 className="text-3xl font-bold mb-6 text-center">Domestic Tours</h1>
         <p className="text-center max-w-2xl mx-auto text-lg mb-12">
-          Explore India's cultural treasures, breathtaking landscapes, and vibrant cities on these curated domestic tours.
+          Explore India&apos;s cultural treasures, breathtaking landscapes, and vibrant cities on these curated domestic tours.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <TourCard title="Hyderabad" description="Explore the rich culture, heritage, and cuisine of Hyderabad, including the iconic Charminar." link="/tours/domestic/hyderabad" image="/imagesatlas/domesticatlas/hydrabad.jpeg" />
@@ -22,7 +20,7 @@ export default function DomesticPage() {
           <TourCard title="Rajasthan" description="Visit the magnificent forts, palaces, and deserts of Rajasthan, a land of royal history and culture." link="/tours/domestic/rajasthan" image="/imagesatlas/domesticatlas/rajasthan.jpeg" />
           <TourCard title="Kerala" description="Relax in the backwaters of Kerala, and explore its beaches, hill stations, and unique culture." link="/tours/domestic/kerala" image="/imagesatlas/domesticatlas/kerla.jpeg" />
           <TourCard title="Bangalore - Mysore - Ooty - Coorg" description="Experience the beauty of Southern India, from the bustling city of Bangalore to the tranquil hills of Coorg." link="/tours/domestic/bangalore-ooty" image="/imagesatlas/domesticatlas/mysore.jpeg" />
-          <TourCard title="Golden Triangle (Delhi - Agra - Jaipur)" description="Explore India's historical treasures, including the Taj Mahal, Jaipur’s forts, and Delhi’s landmarks." link="/tours/domestic/golden-triangle" image="/imagesatlas/domesticatlas/golden triangle.jpeg" />
+          <TourCard title="Golden Triangle (Delhi - Agra - Jaipur)" description="Explore India&apos;s historical treasures, including the Taj Mahal, Jaipur&apos;s forts, and Delhi&apos;s landmarks." link="/tours/domestic/golden-triangle" image="/imagesatlas/domesticatlas/golden triangle.jpeg" />
           <TourCard title="Manali" description="Relax in the beautiful hill station of Manali, perfect for adventure and nature lovers." link="/tours/domestic/manali" image="/imagesatlas/domesticatlas/manali.jpeg" />
           <TourCard title="Lakshadweep" description="Uncover the untouched beauty of Lakshadweep, a paradise of coral islands and turquoise waters." link="/tours/domestic/lakshadweep" image="/imagesatlas/domesticatlas/lakshadweep.jpeg" />
           <TourCard title="Goa" description="Relax on the beautiful beaches of Goa and explore its vibrant nightlife and Portuguese heritage." link="/tours/domestic/goa" image="/imagesatlas/domesticatlas/goa.jpeg" />

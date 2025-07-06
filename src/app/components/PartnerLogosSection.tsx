@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function PartnerLogosSection(): React.ReactElement {
   const logos = [
@@ -37,9 +38,11 @@ export default function PartnerLogosSection(): React.ReactElement {
               transition={{ delay: idx * 0.1, duration: 0.4 }}
               className="block"
             >
-              <img
+              <Image
                 src={logo.src}
                 alt={logo.alt}
+                width={112}
+                height={64}
                 className="w-24 sm:w-28 h-auto object-contain"
               />
             </motion.a>

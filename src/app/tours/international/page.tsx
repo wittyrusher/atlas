@@ -1,7 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import TourCard from '../../components/TourCard'; // Import the TourCard component
@@ -13,7 +11,7 @@ export default function InternationalToursPage() {
       <main className="px-6 py-12">
         <h1 className="text-3xl font-bold mb-6 text-center">Explore International Tours</h1>
         <p className="text-center max-w-2xl mx-auto text-lg mb-12">
-          Discover the world's most iconic destinations. From Europe to Asia, find your next international adventure with us.
+          Discover the world&apos;s most iconic destinations. From Europe to Asia, find your next international adventure with us.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <TourCard 

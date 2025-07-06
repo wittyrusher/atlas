@@ -224,7 +224,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, isExpanded, onToggle
         {/* Expandable Details */}
         <div className={`transition-all duration-300 ${isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
           <div className="mb-4 p-3 bg-white/60 rounded-lg">
-            <h4 className="font-semibold text-gray-800 text-sm mb-2">What's included:</h4>
+            <h4 className="font-semibold text-gray-800 text-sm mb-2">What&apos;s included:</h4>
             <div className="space-y-1">
               {service.fullDescription.split(' • ').map((item, index) => (
                 <div key={index} className="flex items-start gap-2 text-xs text-gray-600">
@@ -286,7 +286,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, isExpanded, onToggle
           {/* Expandable Details */}
           <div className={`transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
             <div className="mb-4 p-4 bg-white/50 rounded-xl">
-              <h4 className="font-semibold text-gray-800 text-sm mb-2">What's included:</h4>
+              <h4 className="font-semibold text-gray-800 text-sm mb-2">What&apos;s included:</h4>
               <div className="space-y-2">
                 {service.fullDescription.split(' • ').map((item, index) => (
                   <div key={index} className="flex items-start gap-2 text-sm text-gray-600">

@@ -164,7 +164,7 @@ export default function TestimonialShowcase() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-2xl leading-relaxed mb-8 font-medium text-white/90 max-w-4xl mx-auto"
             >
-              "{currentTestimonial.quote}"
+              &ldquo;{currentTestimonial.quote}&rdquo;
             </motion.blockquote>
 
             {/* Rating Stars */}

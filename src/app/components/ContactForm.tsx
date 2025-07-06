@@ -158,7 +158,7 @@ Sent via Contact Form`;
       }
 
       // Show success message
-      alert('Thank you! Your inquiry has been sent. We\'ll get back to you shortly via WhatsApp!');
+      alert('Thank you! Your inquiry has been sent. We&apos;ll get back to you shortly via WhatsApp!');
       
       // Reset form
       setFormData({
@@ -174,7 +174,8 @@ Sent via Contact Form`;
       });
       setCharCount(0);
       
-    } catch (error) {
+    } catch (err) {
+      console.error('Error sending message:', err);
       alert('There was an error sending your message. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -205,7 +206,7 @@ Sent via Contact Form`;
                 Plan Your Dream Journey
               </h2>
               <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-                Fill out the form below and we'll connect with you on WhatsApp for instant assistance and personalized travel planning
+                Fill out the form below and we&apos;ll connect with you on WhatsApp for instant assistance and personalized travel planning
               </p>
             </div>
 
@@ -396,7 +397,7 @@ Sent via Contact Form`;
                   required
                   rows={5}
                   className="w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-500/25 focus:border-blue-500 transition-all duration-300 resize-vertical text-gray-900 font-medium text-base shadow-sm hover:border-gray-400"
-                  placeholder="Tell us about your travel plans, preferred dates, budget, special requirements, or any specific attractions you'd like to visit..."
+                  placeholder="Tell us about your travel plans, preferred dates, budget, special requirements, or any specific attractions you&apos;d like to visit..."
                 />
                 <div className={`text-sm text-right font-semibold ${charCount > maxChars * 0.9 ? 'text-red-600' : 'text-gray-600'}`}>
                   {charCount}/{maxChars} characters
@@ -429,7 +430,7 @@ Sent via Contact Form`;
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-5 text-center">
                 <div className="flex items-center justify-center gap-3 text-green-800 font-semibold">
                   <MessageCircle className="w-5 h-5" />
-                  <span className="text-base">We'll contact you instantly on WhatsApp for faster assistance!</span>
+                  <span className="text-base">We&apos;ll contact you instantly on WhatsApp for faster assistance!</span>
                 </div>
               </div>
             </div>

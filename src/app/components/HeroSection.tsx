@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 interface Slide {
@@ -30,6 +32,7 @@ const slides: Slide[] = [
 
 export default function HeroSection(): React.ReactElement {
   const [current, setCurrent] = useState<number>(0);
+  const [imageError, setImageError] = useState<boolean[]>([false, false, false]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -37,6 +40,23 @@ export default function HeroSection(): React.ReactElement {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  const handleImageError = (index: number) => {
+    setImageError(prev => {
+      const newState = [...prev];
+      newState[index] = true;
+      return newState;
+    });
+  };
+
+  const getFallbackImage = (index: number) => {
+    const fallbackImages = [
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      'https://images.unsplash.com/photo-1539650116574-75c0c6ec2e0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+    ];
+    return fallbackImages[index] || fallbackImages[0];
+  };
 
   return (
     <div className="relative w-full h-[600px] overflow-hidden">
@@ -49,20 +69,13 @@ export default function HeroSection(): React.ReactElement {
           transition={{ duration: 1 }}
           className="absolute inset-0 w-full h-full"
         >
-          <img
-            src={slides[current].image}
+          <Image
+            src={imageError[current] ? getFallbackImage(current) : slides[current].image}
             alt={`Slide ${current + 1}`}
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              // Fallback to a placeholder or unsplash image if local image fails
-              const target = e.target as HTMLImageElement;
-              const fallbackImages = [
-                'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-                'https://images.unsplash.com/photo-1539650116574-75c0c6ec2e0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-                'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
-              ];
-              target.src = fallbackImages[current] || fallbackImages[0];
-            }}
+            fill
+            className="object-cover"
+            priority={current === 0}
+            onError={() => handleImageError(current)}
           />
 
           {/* Overlay */}
@@ -95,18 +108,18 @@ export default function HeroSection(): React.ReactElement {
                 transition={{ delay: 0.6 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
-                <a
+                <Link
                   href="/tours"
                   className="inline-block bg-[#f5c624] text-[#03263a] px-8 py-4 rounded-full text-lg font-semibold hover:bg-yellow-400 transform hover:scale-105 transition-all duration-300 shadow-lg"
                 >
                   View Travel Packages
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/contact"
                   className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-[#03263a] transition-all duration-300"
                 >
                   Plan Your Trip
-                </a>
+                </Link>
               </motion.div>
             </div>
           </div>

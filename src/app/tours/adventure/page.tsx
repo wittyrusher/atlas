@@ -1,12 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import TourCard from '../../components/TourCard'; // Import the TourCard component
-import { tours } from '../../data/tours';
-const adventureTours = tours.filter(t => t.category === "adventure");
 
 export default function AdventurePage() {
   return (

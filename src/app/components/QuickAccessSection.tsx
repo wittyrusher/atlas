@@ -162,7 +162,7 @@ export default function QuickAccessSection(): React.ReactElement {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <p className="text-gray-600 mb-6">Can't find what you're looking for?</p>
+          <p className="text-gray-600 mb-6">Can&apos;t find what you&apos;re looking for?</p>
           <Link 
             href="/tours" 
             className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#013319] to-emerald-800 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 hover:scale-105"

@@ -1,36 +1,16 @@
 // app/tours/page.tsx
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useRouter } from 'next/navigation';
 import { tours } from '../data/tours';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TourCard from '../components/TourCard';
 
-// Define the tour interface based on your actual data structure
-interface Tour {
-  slug: string;
-  category: string;
-  title: string;
-  imageGallery: string[];
-  price: number;
-  days: number;
-  itinerary: string[];
-  inclusions: string[];
-  exclusions: string[];
-  description: string;
-}
-
 export default function ToursPage() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const categories = [
     { id: 'all', name: 'All Tours', icon: '🌍', count: tours.length },
@@ -159,7 +139,7 @@ export default function ToursPage() {
           <section className="max-w-6xl mx-auto mb-16">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-[#013319] mb-4">Featured Tours</h2>
-              <p className="text-gray-600 text-lg">Handpicked experiences you shouldn't miss</p>
+              <p className="text-gray-600 text-lg">Handpicked experiences you shouldn&apos;t miss</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
