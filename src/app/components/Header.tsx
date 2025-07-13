@@ -76,10 +76,10 @@ const Header = () => {
             </motion.div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-white group-hover:text-[#f5c624] transition-colors duration-300">
-                Atlas Hoppers
+                Hoppico
               </span>
               <span className="text-xs text-[#f5c624]/80 font-medium hidden sm:block">
-                Your Journey Starts Here
+                let's hop the world together
               </span>
             </div>
           </Link>
