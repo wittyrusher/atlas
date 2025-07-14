@@ -79,7 +79,7 @@ const Header = () => {
                 Atlas Hoppers
               </span>
               <span className="text-xs text-[#f5c624]/80 font-medium hidden sm:block">
-                let's hop the world together
+                let&apos;s hop the world together
               </span>
             </div>
           </Link>
@@ -165,15 +165,15 @@ const Header = () => {
             <div className="w-6 h-6 relative">
               <motion.span
                 animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-                className="absolute w-6 h-0.5 bg-current top-1 origin-center block transition-all duration-300"
+                className="absolute w-6 h-6 bg-current top-1 origin-center block transition-all duration-300"
               />
               <motion.span
                 animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
-                className="absolute w-6 h-0.5 bg-current top-3 block transition-all duration-300"
+                className="absolute w-6 h-6 bg-current top-3 block transition-all duration-300"
               />
               <motion.span
                 animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-                className="absolute w-6 h-0.5 bg-current top-5 origin-center block transition-all duration-300"
+                className="absolute w-6 h-6 bg-current top-5 origin-center block transition-all duration-300"
               />
             </div>
           </button>
