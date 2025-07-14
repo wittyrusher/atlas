@@ -7,7 +7,7 @@ import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const pageTitles: Record<string, string> = {
-  '/': 'Welcome to Atlas',
+  '/': 'Welcome to Atlas Hoppers',
   '/about': 'About Us',
   '/services': 'Our Services',
   '/tours': 'Explore Tours',
@@ -76,7 +76,7 @@ const Header = () => {
             </motion.div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-white group-hover:text-[#f5c624] transition-colors duration-300">
-                Hoppico
+                Atlas Hoppers
               </span>
               <span className="text-xs text-[#f5c624]/80 font-medium hidden sm:block">
                 let's hop the world together
@@ -94,7 +94,7 @@ const Header = () => {
             >
               <h1 className="text-lg font-semibold text-white">{title}</h1>
               <p className="text-sm text-[#f5c624] italic font-medium">
-                Atlas in Hand, Stories at Heart
+                hop the world with us 
               </p>
             </motion.div>
           </div>
@@ -194,7 +194,7 @@ const Header = () => {
               {/* Mobile Title */}
               <div className="text-center mb-6 pb-4 border-b border-white/10">
                 <h1 className="text-lg font-semibold text-white">{title}</h1>
-                <p className="text-sm text-[#f5c624] italic">Atlas in Hand, Stories at Heart</p>
+                <p className="text-sm text-[#f5c624] italic">hop the world with us </p>
               </div>
 
               <Link href="/" className={`block ${navLinkClass('/')}`}>
