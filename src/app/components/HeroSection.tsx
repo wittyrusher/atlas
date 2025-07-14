@@ -49,15 +49,6 @@ export default function HeroSection(): React.ReactElement {
     });
   };
 
-  const getFallbackImage = (index: number) => {
-    const fallbackImages = [
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      'https://images.unsplash.com/photo-1539650116574-75c0c6ec2e0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
-    ];
-    return fallbackImages[index] || fallbackImages[0];
-  };
-
   return (
     <div className="relative w-full h-[600px] overflow-hidden">
       <AnimatePresence mode="wait">
@@ -69,14 +60,22 @@ export default function HeroSection(): React.ReactElement {
           transition={{ duration: 1 }}
           className="absolute inset-0 w-full h-full"
         >
-          <Image
-            src={imageError[current] ? getFallbackImage(current) : slides[current].image}
-            alt={`Slide ${current + 1}`}
-            fill
-            className="object-cover"
-            priority={current === 0}
-            onError={() => handleImageError(current)}
-          />
+          {/* Show image only if it hasn't errored */}
+          {!imageError[current] && (
+            <Image
+              src={slides[current].image}
+              alt={`Slide ${current + 1}`}
+              fill
+              className="object-cover"
+              priority={current === 0}
+              onError={() => handleImageError(current)}
+            />
+          )}
+
+          {/* Fallback gradient background when image fails */}
+          {imageError[current] && (
+            <div className="absolute inset-0 bg-gradient-to-br from-[#03263a] via-[#024c68] to-[#03263a]" />
+          )}
 
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60" />
