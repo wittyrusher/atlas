@@ -112,7 +112,7 @@ export const metadata: Metadata = {
   
   // Additional meta tags for better SEO
   other: {
-    "google-site-verification": " google9c70855ad00a1e74.html", // Add your verification code
+    "google-site-verification": " ltavbw6JdKKvJVBIJ94Wr9ilaT97to5aZj-FVKOjRS8", // Add your verification code
     "msvalidate.01": "YOUR_BING_VERIFICATION_CODE", // Add Bing verification
   },
   
@@ -136,7 +136,7 @@ export const metadata: Metadata = {
   
   // Verification and schema prep
   verification: {
-    google: " google9c70855ad00a1e74.html",
+    google: "ltavbw6JdKKvJVBIJ94Wr9ilaT97to5aZj-FVKOjRS8",
     yandex: "YOUR_YANDEX_VERIFICATION_CODE",
     yahoo: "YOUR_YAHOO_VERIFICATION_CODE"
   }
