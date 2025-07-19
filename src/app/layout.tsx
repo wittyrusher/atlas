@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     default: "Atlas Hoppers India - Educational Tours & Adventure Travel | School College Corporate Trips",
     template: "%s | Atlas Hoppers India"
   },
-  description: "Atlas Hoppers India: Leading educational tour operator for school trips, college IV tours, family holidays & corporate retreats across India. Expert-guided, safe, memorable experiences since inception.",
+  description: "Atlas Hoppers India: Leading educational tour operator for school trips, college IV tours, family holidays & corporate retreats across India. Expert-guided, safe, memorable experiences since inception.We are proudly based in Pune, India.",
   
   // Enhanced Keywords for India-specific ranking
   keywords: [
@@ -112,7 +112,7 @@ export const metadata: Metadata = {
   
   // Additional meta tags for better SEO
   other: {
-    "google-site-verification": " google3b19e37ed500946f.html", // Add your verification code
+    "google-site-verification": " google9c70855ad00a1e74.html", // Add your verification code
     "msvalidate.01": "YOUR_BING_VERIFICATION_CODE", // Add Bing verification
   },
   
@@ -136,7 +136,7 @@ export const metadata: Metadata = {
   
   // Verification and schema prep
   verification: {
-    google: "google3b19e37ed500946f.html",
+    google: " google9c70855ad00a1e74.html",
     yandex: "YOUR_YANDEX_VERIFICATION_CODE",
     yahoo: "YOUR_YAHOO_VERIFICATION_CODE"
   }
