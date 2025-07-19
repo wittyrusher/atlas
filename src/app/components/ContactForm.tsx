@@ -22,7 +22,7 @@ interface FormData {
 
 export default function ContactForm({ 
   onSubmit,
-  whatsappNumber = '+1234567890' 
+  whatsappNumber = '+918805948784' 
 }: ContactFormProps) {
   const [formData, setFormData] = useState<FormData>({
     category: '',
