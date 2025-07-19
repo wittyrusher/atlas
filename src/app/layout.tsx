@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   // Enhanced Open Graph
   openGraph: {
     title: "Atlas Hoppers India - Educational Tours & Adventure Travel Company",
-    description: "India's trusted educational tour operator specializing in school trips, college IV tours, family holidays & corporate retreats. Safe, guided, memorable experiences across incredible India.",
+    description: "India's trusted educational tour operator specializing in school trips, college IV tours, family holidays & corporate retreats. Safe, guided, memorable experiences across incredible India and which is based in Pune.",
     url: "https://atlashoppers.netlify.app",
     siteName: "Atlas Hoppers India",
     images: [
@@ -112,7 +112,7 @@ export const metadata: Metadata = {
   
   // Additional meta tags for better SEO
   other: {
-    "google-site-verification": "YOUR_GOOGLE_VERIFICATION_CODE", // Add your verification code
+    "google-site-verification": " google9c70855ad00a1e74.html", // Add your verification code
     "msvalidate.01": "YOUR_BING_VERIFICATION_CODE", // Add Bing verification
   },
   
@@ -131,11 +131,12 @@ export const metadata: Metadata = {
   
   // Geographic targeting
   category: "travel",
-  classification: "Educational Travel Services",
+  classification: 
+  "travel, tours, education, adventure",
   
   // Verification and schema prep
   verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE",
+    google: "google9c70855ad00a1e74.html",
     yandex: "YOUR_YANDEX_VERIFICATION_CODE",
     yahoo: "YOUR_YAHOO_VERIFICATION_CODE"
   }
@@ -161,16 +162,16 @@ export default function RootLayout({
               "url": "https://atlashoppers.netlify.app",
               "logo": "https://atlashoppers.netlify.app/logo2022.png",
               "sameAs": [
-                "https://facebook.com/atlashoppersindia", // Add your social media URLs
-                "https://instagram.com/atlashoppersindia",
+                "https://www.facebook.com/profile.php?id=61577991212051", // Add your social media URLs
+                "https://www.instagram.com/atlas_hoppers/",
                 "https://twitter.com/atlashoppersin",
                 "https://linkedin.com/company/atlas-hoppers-india"
               ],
               "address": {
-                "@type": "PostalAddress",
+                "@type": "885, Bhandarkar Rd, Deccan Gymkhana, Pune, Maharashtra 411004, India",
                 "addressCountry": "India",
-                "addressRegion": "YOUR_STATE", // Add your state
-                "addressLocality": "YOUR_CITY" // Add your city
+                "addressRegion": "Maharashtra", // Add your state
+                "addressLocality": "Pune" // Add your city
               },
               "areaServed": {
                 "@type": "Country",
@@ -182,12 +183,24 @@ export default function RootLayout({
                 "College IV Tours",
                 "Corporate Retreats",
                 "Family Holidays",
+                "International Tours",
+                "Educational Tours",
+                "School Excursions",
+                "College Study Tours",
+                "Adventure Learning Trips",
+                "Customized Tours",
+                "Cultural Tours",
+                "Heritage Tours",
+                "Nature Tours",
+                "Wildlife Tours",
+                "photography Tours",
+
                 "Adventure Tours"
               ],
               "priceRange": "$$",
-              "telephone": "YOUR_PHONE_NUMBER", // Add your contact number
-              "email": "YOUR_EMAIL", // Add your email
-              "foundingDate": "YOUR_FOUNDING_YEAR", // Add founding year
+              "telephone": "+918805948784", // Add your contact number
+              "email": "atlashoppers26@gmail.com", // Add your email
+              "foundingDate": "2022", // Add founding year
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "Educational & Adventure Tours",
