@@ -14,17 +14,17 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: '/manali1.jpg',
-    title: 'Explore the Mountains',
-    description: 'Find peace and adventure in the Himalayan foothills.',
+    image: '/imagesatlas/adventureatlas/ladakh.cms',
+    title: 'Adventure Awaits in Ladakh',
+    description: 'Experience the breathtaking landscapes and rich culture of Ladakh.',
   },
   {
-    image: '/manali2.jpg',
-    title: 'Experience the Culture',
-    description: 'Dive into the local traditions and vibrant festivals.',
+    image: '/imagesatlas/adventureatlas/sikkim.jpg',
+    title: 'The Land of Mystical Beauty',
+    description: 'Experience the rich culture and stunning landscapes of Sikkim.',
   },
   {
-    image: '/manali3.jpg',
+    image: '/imagesatlas/domesticatlas/kareri lake.jpeg',
     title: 'Relax in Nature',
     description: 'Unplug and rejuvenate in the lap of nature.',
   },
@@ -37,7 +37,7 @@ export default function HeroSection(): React.ReactElement {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 8000); // Increased from 5000ms to 8000ms (8 seconds)
     return () => clearInterval(interval);
   }, []);
 
@@ -47,6 +47,14 @@ export default function HeroSection(): React.ReactElement {
       newState[index] = true;
       return newState;
     });
+  };
+
+  const goToPrevious = () => {
+    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrent((prev) => (prev + 1) % slides.length);
   };
 
   return (
@@ -125,6 +133,56 @@ export default function HeroSection(): React.ReactElement {
         </motion.div>
       </AnimatePresence>
 
+      {/* Mobile Navigation Arrows */}
+      <div className="absolute inset-y-0 left-0 flex items-center z-20 md:hidden">
+        <button
+          onClick={goToPrevious}
+          className="ml-4 bg-black/30 backdrop-blur-sm text-white p-3 rounded-full hover:bg-black/50 transition-all duration-300 shadow-lg"
+          aria-label="Previous slide"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+      </div>
+
+      <div className="absolute inset-y-0 right-0 flex items-center z-20 md:hidden">
+        <button
+          onClick={goToNext}
+          className="mr-4 bg-black/30 backdrop-blur-sm text-white p-3 rounded-full hover:bg-black/50 transition-all duration-300 shadow-lg"
+          aria-label="Next slide"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Desktop Navigation Arrows (optional - shown on hover) */}
+      <div className="absolute inset-y-0 left-0 items-center z-20 hidden md:flex opacity-0 hover:opacity-100 transition-opacity duration-300 group-hover:opacity-100">
+        <button
+          onClick={goToPrevious}
+          className="ml-6 bg-black/20 backdrop-blur-sm text-white p-4 rounded-full hover:bg-black/40 transition-all duration-300 shadow-lg"
+          aria-label="Previous slide"
+        >
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+      </div>
+
+      <div className="absolute inset-y-0 right-0 items-center z-20 hidden md:flex opacity-0 hover:opacity-100 transition-opacity duration-300 group-hover:opacity-100">
+        <button
+          onClick={goToNext}
+          className="mr-6 bg-black/20 backdrop-blur-sm text-white p-4 rounded-full hover:bg-black/40 transition-all duration-300 shadow-lg"
+          aria-label="Next slide"
+        >
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
       {/* Slide Indicators */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
         {slides.map((_, index) => (
@@ -137,6 +195,9 @@ export default function HeroSection(): React.ReactElement {
           />
         ))}
       </div>
+
+      {/* Add group class to main container for desktop hover effect */}
+      <div className="absolute inset-0 group" />
     </div>
   );
 }
