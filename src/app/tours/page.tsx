@@ -7,6 +7,7 @@ import { tours } from '../data/tours';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TourCard from '../components/TourCard';
+import FeaturedTours from '../components/FeaturedTours';
 
 export default function ToursPage() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -134,60 +135,7 @@ export default function ToursPage() {
           </div>
         </section>
 
-        {/* Featured Tours Section */}
-        {featuredTours.length > 0 && (
-          <section className="max-w-6xl mx-auto mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-[#013319] mb-4">Featured Tours</h2>
-              <p className="text-gray-600 text-lg">Handpicked experiences you shouldn&apos;t miss</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {featuredTours.map((tour, idx) => (
-                <motion.div
-                  key={tour.slug}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: idx * 0.1 }}
-                >
-                  <TourCard
-                    title={tour.title}
-                    description={tour.description}
-                    link={`/tours/${tour.category}/${tour.slug}`}
-                    image={tour.imageGallery[0] || '/api/placeholder/400/300'}
-                    price={tour.price.toString()}
-                    duration={`${tour.days} days`}
-                    featured={true}
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Popular Destinations */}
-        <section className="max-w-6xl mx-auto mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-[#013319] mb-4">Popular Destinations</h2>
-            <p className="text-gray-600 text-lg">Trending places our travelers love</p>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            {popularDestinations.map((destination, idx) => (
-              <motion.div
-                key={destination}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: idx * 0.05 }}
-                className="group cursor-pointer"
-              >
-                <div className="bg-gradient-to-r from-gray-50 to-gray-100 hover:from-[#013319] hover:to-emerald-700 text-gray-700 hover:text-white px-6 py-3 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-                  {destination}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
+        
 
         {/* Main Tours Grid */}
         <section className="max-w-6xl mx-auto">
@@ -237,6 +185,33 @@ export default function ToursPage() {
               )}
             </motion.div>
           </AnimatePresence>
+        </section>
+
+        {/* Featured Tours Section - Now using the component */}
+        <FeaturedTours featuredTours={featuredTours} />
+
+         {/* Popular Destinations */}
+        <section className="max-w-6xl mx-auto mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-[#013319] mb-4">Popular Destinations</h2>
+            <p className="text-gray-600 text-lg">Trending places our travelers love</p>
+          </div>
+          
+          <div className="flex flex-wrap justify-center gap-4">
+            {popularDestinations.map((destination, idx) => (
+              <motion.div
+                key={destination}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: idx * 0.05 }}
+                className="group cursor-pointer"
+              >
+                <div className="bg-gradient-to-r from-gray-50 to-gray-100 hover:from-[#013319] hover:to-emerald-700 text-gray-700 hover:text-white px-6 py-3 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                  {destination}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </section>
 
         {/* Newsletter Signup */}

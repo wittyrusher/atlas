@@ -7,7 +7,8 @@ export const tours = [
     title: "Hampta Pass - Chandratal",
     imageGallery: [
       "/imagesatlas/adventureatlas/chandratal.jpeg",
-      "/imagesatlas/adventureatlas/chandratal.jpeg",
+      "/imagesatlas/adventureatlas/chandratal2.jpg",
+      "/imagesatlas/adventureatlas/chandratal3.jpg",
     ],
     price: 18500,
     days: 6,
