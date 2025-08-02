@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   // Primary SEO
   title: {
-    default: "Atlas Hoppers India - Educational Tours & Adventure Travel | School College Corporate Trips",
+    default: "Atlas Hoppers Pune India - Educational Tours & Adventure Travel | School College Corporate Trips",
     template: "%s | Atlas Hoppers India"
   },
   description: "Atlas Hoppers India: Leading educational tour operator for school trips, college IV tours, family holidays & corporate retreats across India. Expert-guided, safe, memorable experiences since inception.We are proudly based in Pune, India.",
