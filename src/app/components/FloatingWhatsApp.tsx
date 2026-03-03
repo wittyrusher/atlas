@@ -10,7 +10,7 @@ interface FloatingContactProps {
   showTooltip?: boolean;
 }
 
-export default function FloatingContact({ 
+export default function FloatingContact({
   phoneNumber = '+918805948784',
   defaultMessage = "Hi! I'd like to know more about your tour packages.",
   position = 'bottom-right',
@@ -31,7 +31,7 @@ export default function FloatingContact({
 
   const openWhatsApp = (category?: string) => {
     let message = defaultMessage;
-    
+
     if (category) {
       const messages = {
         general: "Hi! I'd like to know more about your tour packages.",
@@ -41,7 +41,7 @@ export default function FloatingContact({
       };
       message = messages[category as keyof typeof messages] || defaultMessage;
     }
-    
+
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     setIsExpanded(false);
@@ -52,7 +52,7 @@ export default function FloatingContact({
   };
 
   const openEmail = () => {
-    window.open('mailto:info@atlashoppers.in?subject=Tour Inquiry', '_self');
+    window.open('mailto:info@hoppico.in?subject=Tour Inquiry', '_self');
   };
 
   if (!isMounted) {
@@ -66,14 +66,14 @@ export default function FloatingContact({
         <div className={`absolute ${position === 'bottom-right' ? 'right-0 bottom-20' : 'left-0 bottom-20'} bg-white rounded-2xl shadow-2xl p-4 w-64 border border-gray-100`}>
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-semibold text-gray-800">How can we help?</h3>
-            <button 
+            <button
               onClick={() => setIsExpanded(false)}
               className="p-1 hover:bg-gray-100 rounded-full transition-colors"
             >
               <X className="w-4 h-4" />
             </button>
           </div>
-          
+
           <div className="space-y-2">
             <button
               onClick={() => openWhatsApp('general')}
@@ -142,7 +142,7 @@ export default function FloatingContact({
         <div className={`absolute ${position === 'bottom-right' ? 'right-24 bottom-2' : 'left-24 bottom-2'} bg-white rounded-lg shadow-lg px-4 py-2 whitespace-nowrap animate-bounce`}>
           <div className="text-sm font-medium text-gray-800">Need help? Chat with us!</div>
           <div className={`absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-white rotate-45 ${position === 'bottom-right' ? '-right-1' : '-left-1'}`}></div>
-          <button 
+          <button
             onClick={() => setShowTooltipState(false)}
             className="absolute -top-1 -right-1 w-4 h-4 bg-gray-200 rounded-full flex items-center justify-center"
           >
@@ -158,9 +158,9 @@ export default function FloatingContact({
       >
         <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-20"></div>
         <div className="absolute inset-0 rounded-full bg-green-500 animate-pulse opacity-40"></div>
-        
+
         <MessageCircle className="w-7 h-7 text-white relative z-10" />
-        
+
         <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 border-2 border-white rounded-full animate-pulse"></div>
       </button>
     </div>

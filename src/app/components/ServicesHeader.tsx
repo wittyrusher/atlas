@@ -5,7 +5,7 @@ const ServicesHeader = () => {
   return (
     <div className="text-center mb-12">
       <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-        Atlas Hoppers Services
+        Hoppico Services
       </h2>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
         From custom group adventures to wellness retreats, discover travel experiences crafted with passion and precision for every kind of explorer

@@ -84,10 +84,10 @@ export default function CorporateGetaways() {
             </div>
           </div>
           <p className="text-sm sm:text-lg lg:text-xl text-green-100 leading-relaxed">
-            Take your team out for more than just a break. Atlas Hoppers&apos; corporate getaways focus on culture, creativity, and connectivity. We turn destinations into dynamic hubs for growth, wellness, and collective momentum.
+            Take your team out for more than just a break. Hoppico&apos; corporate getaways focus on culture, creativity, and connectivity. We turn destinations into dynamic hubs for growth, wellness, and collective momentum.
           </p>
         </div>
-        
+
         {/* Decorative Elements - Hidden on mobile */}
         <div className="hidden sm:block absolute top-4 right-4 opacity-20">
           <div className="w-20 h-20 lg:w-32 lg:h-32 bg-white/10 rounded-full"></div>
@@ -109,8 +109,8 @@ export default function CorporateGetaways() {
               <span>Learn More</span>
               <ChevronDown className="w-4 h-4" />
             </button>
-            
-            <button 
+
+            <button
               onClick={handlePlanRetreat}
               className="w-full sm:flex-1 sm:max-w-xs bg-white text-gray-800 font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl border-2 border-gray-200 hover:border-green-400 transform hover:scale-105 transition-all duration-300"
             >
@@ -120,16 +120,15 @@ export default function CorporateGetaways() {
         )}
 
         {/* Expanded Content */}
-        <div className={`transition-all duration-700 ease-in-out overflow-hidden ${
-          isExpanded ? 'max-h-[5000px] opacity-100 mt-0' : 'max-h-0 opacity-0 mt-0'
-        }`}>
+        <div className={`transition-all duration-700 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100 mt-0' : 'max-h-0 opacity-0 mt-0'
+          }`}>
           {/* Header with Close Button */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 sm:mb-8 pt-4 sm:pt-0">
             <h3 className="text-xl sm:text-2xl font-bold text-gray-800 flex items-center gap-3">
               <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-green-600 to-teal-600 rounded-lg flex-shrink-0"></div>
               What&apos;s Included
             </h3>
-            
+
             <button
               onClick={toggleExpanded}
               className="self-start sm:self-auto flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-xl font-medium shadow-md hover:shadow-lg transition-all duration-300"
@@ -142,7 +141,7 @@ export default function CorporateGetaways() {
           {/* All Inclusions Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
             {inclusions.map((item, index) => (
-              <div 
+              <div
                 key={index}
                 className="group bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100"
               >
@@ -163,7 +162,7 @@ export default function CorporateGetaways() {
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {addOns.map((addon, index) => (
-                <div 
+                <div
                   key={index}
                   className="flex items-center gap-3 p-3 rounded-lg sm:rounded-xl bg-gradient-to-r from-green-50 to-teal-50 hover:from-green-100 hover:to-teal-100 transition-all duration-300"
                 >
@@ -176,7 +175,7 @@ export default function CorporateGetaways() {
 
           {/* CTA Section when expanded */}
           <div className="text-center mb-8">
-            <button 
+            <button
               onClick={handlePlanRetreat}
               className="w-full sm:w-auto bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 max-w-xs sm:max-w-none mx-auto"
             >

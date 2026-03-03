@@ -7,9 +7,9 @@ interface ContactOptionsProps {
   email?: string;
 }
 
-export default function ContactOptions({ 
+export default function ContactOptions({
   phoneNumber = '+918805948784',
-  email = 'atlashoppers26@gmail.com' 
+  email = 'thehoppico@gmail.com'
 }: ContactOptionsProps) {
 
   const openWhatsApp = () => {
@@ -28,7 +28,7 @@ export default function ContactOptions({
 
   return (
     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg border border-blue-100">
-      
+
       <div className="text-center mb-8">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">Get in Touch</h2>
         <p className="text-gray-600">Choose your preferred way to contact us</p>
@@ -92,7 +92,7 @@ export default function ContactOptions({
 
       {/* Additional Information */}
       <div className="mt-8 space-y-6">
-        
+
         {/* Business Hours */}
         <div className="bg-white/60 rounded-xl p-6 text-center">
           <h3 className="font-semibold text-gray-800 mb-3">Business Hours</h3>

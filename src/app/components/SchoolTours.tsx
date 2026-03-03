@@ -13,7 +13,7 @@ export default function SchoolTours() {
     },
     {
       icon: <MapPin className="w-6 h-6" />,
-      title: "Heritage & Cultural Walks", 
+      title: "Heritage & Cultural Walks",
       description: "Guided storytelling at forts, palaces, temples, archaeological wonders",
       color: "from-amber-500 to-orange-400"
     },
@@ -45,7 +45,7 @@ export default function SchoolTours() {
 
   const addOns = [
     "Trip kits (caps, IDs, journals)",
-    "Custom itineraries by grade level", 
+    "Custom itineraries by grade level",
     "School-branded photo & video memory kits",
     "Female tour managers for safety",
     "Medical backup & insurance coverage",
@@ -84,10 +84,10 @@ export default function SchoolTours() {
             </div>
           </div>
           <p className="text-sm sm:text-lg lg:text-xl text-yellow-100 leading-relaxed">
-            Atlas Hoppers organizes educational school tours that go beyond sightseeing—we create learning adventures that spark imagination and build confidence in young minds. Every destination is carefully vetted for safety, age-appropriateness, and experiential value.
+            Hoppico organizes educational school tours that go beyond sightseeing—we create learning adventures that spark imagination and build confidence in young minds. Every destination is carefully vetted for safety, age-appropriateness, and experiential value.
           </p>
         </div>
-        
+
         {/* Decorative Elements - Hidden on mobile */}
         <div className="hidden sm:block absolute top-4 right-4 opacity-20">
           <div className="w-20 h-20 lg:w-32 lg:h-32 bg-white/10 rounded-full"></div>
@@ -109,8 +109,8 @@ export default function SchoolTours() {
               <span>Learn More</span>
               <ChevronDown className="w-4 h-4" />
             </button>
-            
-            <button 
+
+            <button
               onClick={handlePlanTour}
               className="w-full sm:flex-1 sm:max-w-xs bg-white text-gray-800 font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl border-2 border-gray-200 hover:border-yellow-400 transform hover:scale-105 transition-all duration-300"
             >
@@ -120,16 +120,15 @@ export default function SchoolTours() {
         )}
 
         {/* Expanded Content */}
-        <div className={`transition-all duration-700 ease-in-out overflow-hidden ${
-          isExpanded ? 'max-h-[5000px] opacity-100 mt-0' : 'max-h-0 opacity-0 mt-0'
-        }`}>
+        <div className={`transition-all duration-700 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100 mt-0' : 'max-h-0 opacity-0 mt-0'
+          }`}>
           {/* Header with Close Button */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 sm:mb-8 pt-4 sm:pt-0">
             <h3 className="text-xl sm:text-2xl font-bold text-gray-800 flex items-center gap-3">
               <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex-shrink-0"></div>
               What We Offer
             </h3>
-            
+
             <button
               onClick={toggleExpanded}
               className="self-start sm:self-auto flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-xl font-medium shadow-md hover:shadow-lg transition-all duration-300"
@@ -142,7 +141,7 @@ export default function SchoolTours() {
           {/* All Offerings Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
             {offerings.map((item, index) => (
-              <div 
+              <div
                 key={index}
                 className="group bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100"
               >
@@ -163,7 +162,7 @@ export default function SchoolTours() {
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {addOns.map((addon, index) => (
-                <div 
+                <div
                   key={index}
                   className="flex items-center gap-3 p-3 rounded-lg sm:rounded-xl bg-gradient-to-r from-yellow-50 to-orange-50 hover:from-yellow-100 hover:to-orange-100 transition-all duration-300"
                 >
@@ -176,7 +175,7 @@ export default function SchoolTours() {
 
           {/* CTA Section when expanded */}
           <div className="text-center mb-8">
-            <button 
+            <button
               onClick={handlePlanTour}
               className="w-full sm:w-auto bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 max-w-xs sm:max-w-none mx-auto"
             >

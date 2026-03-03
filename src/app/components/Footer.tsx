@@ -14,14 +14,14 @@ export default function Footer() {
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
           <div className="grid gap-8 lg:gap-12 sm:grid-cols-2 lg:grid-cols-4">
-            
+
             {/* About Section - Enhanced with Logo */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="relative">
                   <Image
                     src="/atlaslogo.jpg"
-                    alt="Atlas Logo"
+                    alt="Hoppico Logo"
                     width={40}
                     height={40}
                     className="object-contain rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
@@ -36,7 +36,7 @@ export default function Footer() {
                   />
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-[#f5c624] rounded-full opacity-80 animate-pulse"></div>
                 </div>
-                <h3 className="text-xl font-bold">Atlas Hoppers</h3>
+                <h3 className="text-xl font-bold">Hoppico</h3>
               </div>
               <p className="text-gray-300 text-sm leading-relaxed mb-4">
                 We specialize in delivering exceptional travel services. Whether you&apos;re looking for adventure, relaxation, or a bit of both, we have the perfect solution for you.
@@ -58,8 +58,8 @@ export default function Footer() {
                   { name: 'Contact', href: '/contact' }
                 ].map((link) => (
                   <li key={link.name}>
-                    <a 
-                      href={link.href} 
+                    <a
+                      href={link.href}
                       className="text-gray-300 hover:text-[#f5c624] transition-all duration-300 text-sm flex items-center group"
                     >
                       <span className="w-2 h-2 bg-[#f5c624] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -80,12 +80,12 @@ export default function Footer() {
                   </div>
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wide">Email</p>
-                    <a href="mailto:atlashoppers26@gmail.com" className="text-sm text-gray-300 hover:text-[#f5c624] transition-colors">
-                      atlashoppers26@gmail.com
+                    <a href="mailto:thehoppico@gmail.com" className="text-sm text-gray-300 hover:text-[#f5c624] transition-colors">
+                      thehoppico@gmail.com
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-3 group">
                   <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-[#f5c624] transition-colors">
                     <Phone className="w-4 h-4 text-[#f5c624] group-hover:text-white" />
@@ -97,7 +97,7 @@ export default function Footer() {
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-3 group">
                   <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center group-hover:bg-[#f5c624] transition-colors">
                     <MapPin className="w-4 h-4 text-[#f5c624] group-hover:text-white" />
@@ -151,16 +151,16 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="flex items-center space-x-2">
                 <p className="text-sm text-gray-400">
-                  &copy; 2025 Atlas Hoppers. All Rights Reserved.
+                  &copy; 2025 Hoppico. All Rights Reserved.
                 </p>
                 <span className="text-[#f5c624]">•</span>
                 <p className="text-sm text-gray-400">
                   Made with <Heart className="w-3 h-3 text-red-500 inline mx-1" /> in India
                 </p>
               </div>
-              
+
               <div className="flex items-center space-x-4">
-                <button 
+                <button
                   onClick={openPrivacyModal}
                   className="text-sm text-gray-400 hover:text-[#f5c624] transition-colors flex items-center space-x-1 group"
                 >
@@ -181,10 +181,10 @@ export default function Footer() {
             <div className="flex justify-between items-center p-6 border-b bg-gradient-to-r from-[#03263a] to-[#024c68] text-white">
               <div>
                 <h2 className="text-2xl font-bold">Privacy Policy & Terms of Service</h2>
-                <p className="text-sm text-[#f5c624] mt-1">Atlas Hoppers - Your trust is our priority</p>
+                <p className="text-sm text-[#f5c624] mt-1">Hoppico - Your trust is our priority</p>
               </div>
-              <button 
-                onClick={closePrivacyModal} 
+              <button
+                onClick={closePrivacyModal}
                 className="text-gray-300 hover:text-white hover:bg-white/10 p-2 rounded-xl transition-all"
               >
                 <X className="w-6 h-6" />
@@ -193,19 +193,19 @@ export default function Footer() {
 
             {/* Modal Content - Enhanced */}
             <div className="p-6 overflow-y-auto max-h-[calc(90vh-140px)] text-gray-800">
-              
+
               <div className="bg-[#f5c624]/10 border border-[#f5c624]/20 rounded-lg p-4 mb-6">
                 <p className="text-sm"><strong>Last Updated:</strong> June 2025</p>
               </div>
-              
+
               <div className="space-y-6">
                 <section>
                   <h2 className="text-2xl font-bold text-[#03263a] mb-4 border-b-2 border-[#f5c624] pb-2">PRIVACY POLICY</h2>
-                  
+
                   <div className="space-y-4">
                     <div>
                       <h3 className="text-lg font-semibold text-[#03263a] mb-2">Information We Collect</h3>
-                      
+
                       <div className="bg-gray-50 rounded-lg p-4 mb-3">
                         <p className="font-medium text-[#03263a] mb-2">Personal Information:</p>
                         <ul className="space-y-1 text-sm text-gray-700 ml-4">
@@ -272,14 +272,14 @@ export default function Footer() {
 
                 <section>
                   <h2 className="text-2xl font-bold text-[#03263a] mb-4 border-b-2 border-[#f5c624] pb-2">TERMS OF SERVICE & CANCELLATION POLICY</h2>
-                  
+
                   <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-4">
                     <h3 className="text-lg font-bold text-red-800 mb-2">STRICT CANCELLATION POLICY</h3>
                     <p className="text-sm text-red-700">
                       <strong>IMPORTANT: Our cancellation policy is firm and non-negotiable. Please read carefully before booking.</strong>
                     </p>
                   </div>
-                  
+
                   <div className="bg-gray-50 rounded-lg p-4">
                     <p className="font-medium text-[#03263a] mb-3">Cancellation Fees by Timeline:</p>
                     <ul className="space-y-2 text-sm text-gray-700">
@@ -339,7 +339,7 @@ export default function Footer() {
                     <div className="bg-gray-50 rounded-lg p-4 text-center">
                       <Mail className="w-6 h-6 text-[#f5c624] mx-auto mb-2" />
                       <p className="text-xs text-gray-500 uppercase tracking-wide">Email</p>
-                      <p className="text-sm font-medium">atlashoppers26@gmail.com</p>
+                      <p className="text-sm font-medium">thehoppico@gmail.com</p>
                     </div>
                     <div className="bg-gray-50 rounded-lg p-4 text-center">
                       <Phone className="w-6 h-6 text-[#f5c624] mx-auto mb-2" />
@@ -366,8 +366,8 @@ export default function Footer() {
 
             {/* Modal Footer - Enhanced */}
             <div className="border-t bg-gray-50 p-4 flex justify-end">
-              <button 
-                onClick={closePrivacyModal} 
+              <button
+                onClick={closePrivacyModal}
                 className="px-6 py-2 bg-gradient-to-r from-[#03263a] to-[#024c68] text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium"
               >
                 Close

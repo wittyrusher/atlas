@@ -7,7 +7,7 @@ import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const pageTitles: Record<string, string> = {
-  '/': 'Welcome to Atlas Hoppers',
+  '/': 'Welcome to Hoppico',
   '/about': 'About Us',
   '/services': 'Our Services',
   '/tours': 'Explore Tours',
@@ -20,7 +20,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [toursDropdownOpen, setToursDropdownOpen] = useState(false);
   const toursDropdownRef = useRef<HTMLDivElement>(null);
-  const title = pageTitles[pathname] || 'Atlas in Hand';
+  const title = pageTitles[pathname] || 'Hoppico in Hand';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -39,16 +39,14 @@ const Header = () => {
   }, []);
 
   const navLinkClass = (path: string) =>
-    `relative transition-all duration-300 px-4 py-2.5 rounded-lg font-medium text-sm ${
-      pathname === path 
-        ? 'text-[#f5c624] bg-white/15 shadow-lg backdrop-blur-sm' 
-        : 'text-white hover:text-[#f5c624] hover:bg-white/10 hover:shadow-md'
+    `relative transition-all duration-300 px-4 py-2.5 rounded-lg font-medium text-sm ${pathname === path
+      ? 'text-[#f5c624] bg-white/15 shadow-lg backdrop-blur-sm'
+      : 'text-white hover:text-[#f5c624] hover:bg-white/10 hover:shadow-md'
     }`;
 
   return (
-    <header className={`bg-gradient-to-r from-[#03263a] via-[#024c68] to-[#03263a] sticky top-0 z-50 transition-all duration-500 ${
-      scrolled ? 'shadow-2xl backdrop-blur-lg bg-opacity-90 border-b border-white/10' : 'shadow-lg'
-    }`}>
+    <header className={`bg-gradient-to-r from-[#03263a] via-[#024c68] to-[#03263a] sticky top-0 z-50 transition-all duration-500 ${scrolled ? 'shadow-2xl backdrop-blur-lg bg-opacity-90 border-b border-white/10' : 'shadow-lg'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex items-center justify-between">
           {/* Logo + Brand */}
@@ -61,7 +59,7 @@ const Header = () => {
             >
               <motion.img
                 src="/atlaslogo.jpg"
-                alt="Atlas Logo"
+                alt="Hoppico Logo"
                 className="w-12 h-12 object-contain rounded-xl shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-300"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
@@ -76,7 +74,7 @@ const Header = () => {
             </motion.div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-white group-hover:text-[#f5c624] transition-colors duration-300">
-                Atlas Hoppers
+                Hoppico
               </span>
               <span className="text-xs text-[#f5c624]/80 font-medium hidden sm:block">
                 let&apos;s hop the world together
@@ -87,14 +85,14 @@ const Header = () => {
           {/* Dynamic Title - Enhanced */}
           <div className="hidden lg:block text-center">
             <motion.div
-              initial={{ opacity: 0, y: -10 }} 
-              animate={{ opacity: 1, y: 0 }} 
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-white/5 backdrop-blur-sm rounded-lg px-6 py-2 border border-white/10"
             >
               <h1 className="text-lg font-semibold text-white">{title}</h1>
               <p className="text-sm text-[#f5c624] italic font-medium">
-                hop the world with us 
+                hop the world with us
               </p>
             </motion.div>
           </div>

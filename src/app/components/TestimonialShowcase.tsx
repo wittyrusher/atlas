@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const testimonials = [
   {
-    quote: "Atlas Hoppers organized one of the most seamless and educational industrial visits our college has had. Students loved it, and everything ran smoothly from travel to sessions!",
+    quote: "Hoppico organized one of the most seamless and educational industrial visits our college has had. Students loved it, and everything ran smoothly from travel to sessions!",
     author: "Dr. Mehta",
     position: "Dean of Engineering",
     location: "Pune",
@@ -65,7 +65,7 @@ export default function TestimonialShowcase() {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <motion.div
-          animate={{ 
+          animate={{
             rotate: 360,
             scale: [1, 1.2, 1]
           }}
@@ -73,7 +73,7 @@ export default function TestimonialShowcase() {
           className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-xl"
         />
         <motion.div
-          animate={{ 
+          animate={{
             rotate: -360,
             scale: [1.2, 1, 1.2]
           }}
@@ -81,7 +81,7 @@ export default function TestimonialShowcase() {
           className="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-r from-pink-400 to-yellow-400 rounded-full blur-xl"
         />
         <motion.div
-          animate={{ 
+          animate={{
             y: [0, -20, 0],
             opacity: [0.3, 0.6, 0.3]
           }}
@@ -107,7 +107,7 @@ export default function TestimonialShowcase() {
             <Award className="w-5 h-5" />
             Client Love Stories
           </motion.div>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -116,7 +116,7 @@ export default function TestimonialShowcase() {
           >
             What Our Clients Say
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -217,7 +217,7 @@ export default function TestimonialShowcase() {
           >
             <ChevronLeft className="w-6 h-6" />
           </motion.button>
-          
+
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -241,11 +241,10 @@ export default function TestimonialShowcase() {
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex 
-                  ? 'bg-gradient-to-r from-yellow-400 to-orange-400 shadow-lg' 
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
+                  ? 'bg-gradient-to-r from-yellow-400 to-orange-400 shadow-lg'
                   : 'bg-white/30 hover:bg-white/50'
-              }`}
+                }`}
             />
           ))}
         </motion.div>

@@ -30,23 +30,23 @@ export default function AboutHero() {
   };
 
   const featureItems = [
-    { 
-      icon: <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />, 
+    {
+      icon: <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />,
       text: "Curated travel packages for all types of explorers",
       gradient: "from-emerald-400 to-teal-500"
     },
-    { 
-      icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />, 
+    {
+      icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />,
       text: "Experienced local guides and seamless logistics",
       gradient: "from-blue-400 to-indigo-500"
     },
-    { 
-      icon: <Heart className="w-5 h-5 sm:w-6 sm:h-6" />, 
+    {
+      icon: <Heart className="w-5 h-5 sm:w-6 sm:h-6" />,
       text: "Flexible options for individuals, families, and groups",
       gradient: "from-pink-400 to-rose-500"
     },
-    { 
-      icon: <Globe2 className="w-5 h-5 sm:w-6 sm:h-6" />, 
+    {
+      icon: <Globe2 className="w-5 h-5 sm:w-6 sm:h-6" />,
       text: "Commitment to sustainability and authentic experiences",
       gradient: "from-violet-400 to-purple-500"
     }
@@ -68,7 +68,7 @@ export default function AboutHero() {
           transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
           className="absolute inset-0"
         />
-        
+
         {/* Subtle floating orbs - hidden on mobile for performance */}
         <motion.div
           animate={{
@@ -89,7 +89,7 @@ export default function AboutHero() {
           className="hidden sm:block absolute bottom-1/4 right-1/4 w-16 h-16 lg:w-24 lg:h-24 bg-gradient-to-r from-teal-400/10 to-cyan-400/10 rounded-full blur-xl"
         />
       </div>
-      
+
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -106,7 +106,7 @@ export default function AboutHero() {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-200/30 via-purple-200/30 to-teal-200/30 rounded-2xl sm:rounded-3xl p-[1px] sm:p-[2px]">
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl w-full h-full"></div>
           </div>
-          
+
           {/* Content */}
           <div className="relative z-10">
             {/* Header section */}
@@ -121,7 +121,7 @@ export default function AboutHero() {
               >
                 <Heart className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white" />
               </motion.div>
-              
+
               <motion.h1
                 variants={itemVariants}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight"
@@ -130,7 +130,7 @@ export default function AboutHero() {
                   Our Story
                 </span>
               </motion.h1>
-              
+
               <motion.div
                 variants={itemVariants}
                 className="w-16 h-0.5 sm:w-24 sm:h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"
@@ -143,7 +143,7 @@ export default function AboutHero() {
               className="text-center mb-6 sm:mb-8 lg:mb-12"
             >
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto px-2">
-                At <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">Atlas</span>, we believe travel isn&apos;t just about visiting places—it&apos;s about creating
+                At <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">Hoppico</span>, we believe travel isn&apos;t just about visiting places—it&apos;s about creating
                 <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600"> magical stories</span> that last a lifetime. Founded by passionate travelers who understand the transformative power of exploration, we&apos;ve dedicated ourselves to crafting extraordinary journeys that connect you with the world&apos;s most incredible destinations and cultures.
               </p>
             </motion.div>
@@ -166,14 +166,14 @@ export default function AboutHero() {
                   </h2>
                 </motion.div>
               </div>
-              
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
                 {featureItems.map((item, index) => (
                   <motion.div
                     key={index}
                     variants={itemVariants}
                     className="group relative"
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.02,
                       y: -2,
                     }}
@@ -207,7 +207,7 @@ export default function AboutHero() {
               <motion.a
                 href="/tours"
                 className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 text-white font-bold text-base sm:text-lg rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 no-underline"
-                whileHover={{ 
+                whileHover={{
                   scale: 1.03,
                   boxShadow: "0 10px 30px rgba(0,0,0,0.15)"
                 }}
