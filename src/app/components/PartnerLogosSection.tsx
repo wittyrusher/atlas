@@ -81,7 +81,7 @@ export default function PartnerLogosSection(): React.ReactElement {
           {/* Gradient Fade Edges */}
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-50 via-slate-50/80 to-transparent z-20 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-50 via-slate-50/80 to-transparent z-20 pointer-events-none" />
-          
+
           {/* Main Scrolling Container */}
           <div className="overflow-hidden py-8">
             <motion.div
@@ -119,7 +119,7 @@ export default function PartnerLogosSection(): React.ReactElement {
                       className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100"
                       transition={{ duration: 0.3 }}
                     />
-                    
+
                     {/* Logo Container with Premium Styling */}
                     <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg group-hover:shadow-2xl transition-all duration-300 border border-white/50">
                       {/* Subtle animated border */}
@@ -127,7 +127,7 @@ export default function PartnerLogosSection(): React.ReactElement {
                         className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500/20 via-transparent to-blue-500/20 opacity-0 group-hover:opacity-100"
                         transition={{ duration: 0.3 }}
                       />
-                      
+
                       <Image
                         src={logo.src}
                         alt={logo.alt}
@@ -148,13 +148,22 @@ export default function PartnerLogosSection(): React.ReactElement {
 
       {/* Floating Particles Animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(8)].map((_, i) => (
+        {[
+          { left: '12%', top: '18%' },
+          { left: '35%', top: '72%' },
+          { left: '58%', top: '35%' },
+          { left: '82%', top: '55%' },
+          { left: '24%', top: '88%' },
+          { left: '67%', top: '12%' },
+          { left: '45%', top: '45%' },
+          { left: '91%', top: '78%' },
+        ].map((pos, i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-gradient-to-r from-emerald-400 to-blue-400 rounded-full opacity-20"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: pos.left,
+              top: pos.top,
             }}
             animate={{
               y: [0, -100, 0],

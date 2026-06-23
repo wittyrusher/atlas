@@ -8,6 +8,7 @@ import PartnerLogosSection from '../components/PartnerLogosSection';
 import TestimonialShowcase from '../components/TestimonialShowcase';
 import QuickAccessSection from '../components/QuickAccessSection';
 import FeaturedTours from '../components/FeaturedTours';
+import IndiaMap from '../components/Indiamap';
 import { tours } from '../data/tours';
 
 export default function HomePage(): React.ReactElement {
@@ -19,6 +20,7 @@ export default function HomePage(): React.ReactElement {
       <Header />
       <HeroSection />
       <QuickAccessSection />
+      <IndiaMap />
       <FeaturedTours featuredTours={featuredTours} />
       <PartnerLogosSection />
       <TestimonialShowcase />

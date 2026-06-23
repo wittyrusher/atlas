@@ -121,10 +121,10 @@ export default function Footer() {
               </p>
               <div className="flex space-x-4">
                 {[
-                  { icon: Facebook, href: 'https://facebook.com', color: 'hover:bg-blue-600', name: 'Facebook' },
-                  { icon: Twitter, href: 'https://twitter.com', color: 'hover:bg-sky-500', name: 'Twitter' },
-                  { icon: Instagram, href: 'https://instagram.com', color: 'hover:bg-pink-600', name: 'Instagram' },
-                  { icon: Linkedin, href: 'https://linkedin.com', color: 'hover:bg-blue-700', name: 'LinkedIn' }
+                  { icon: Facebook, href: 'https://www.facebook.com/hoppicoofficial', color: 'hover:bg-blue-600', name: 'Facebook' },
+                  { icon: Twitter, href: 'https://x.com/hoppico', color: 'hover:bg-sky-500', name: 'Twitter' },
+                  { icon: Instagram, href: 'https://www.instagram.com/hoppico.in/', color: 'hover:bg-pink-600', name: 'Instagram' },
+                  { icon: Linkedin, href: 'https://www.linkedin.com/company/hoppico', color: 'hover:bg-blue-700', name: 'LinkedIn' }
                 ].map((social) => (
                   <a
                     key={social.name}

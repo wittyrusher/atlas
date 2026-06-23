@@ -42,14 +42,18 @@ export default function TourDetailPage() {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   if (!tour) return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0]">
-      <div className="text-center">
-        <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-[#f5c624] to-[#f59e0b] rounded-full flex items-center justify-center">
-          <span className="text-white text-2xl">🗺️</span>
+    <div className="min-h-screen bg-gradient-to-br from-[#fefefe] via-[#f8fffe] to-[#f0fdf4] text-[#013319]">
+      <Header />
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="text-center">
+          <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-[#f5c624] to-[#f59e0b] rounded-full flex items-center justify-center">
+            <span className="text-white text-2xl">🗺️</span>
+          </div>
+          <h1 className="text-2xl font-bold text-[#013319] mb-2">Tour not found</h1>
+          <p className="text-gray-600">The tour you&apos;re looking for doesn&apos;t exist.</p>
         </div>
-        <h1 className="text-2xl font-bold text-[#013319] mb-2">Tour not found</h1>
-        <p className="text-gray-600">The tour you&apos;re looking for doesn&apos;t exist.</p>
       </div>
+      <Footer />
     </div>
   );
 
