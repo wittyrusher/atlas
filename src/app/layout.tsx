@@ -352,7 +352,7 @@ export default function RootLayout({
               "url": "https://hoppico.in",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://hoppico.in/logo2022.png",
+                "url": "https://hoppico.in/favicon.ico.png",
                 "width": 600,
                 "height": 600
               },
@@ -418,7 +418,7 @@ export default function RootLayout({
               "alternateName": "hoppico.in",
               "description": "Pune's #1 educational tour operator. Trusted by 5000+ students. Specialized in school trips, college IV tours, corporate retreats & family holidays across India.",
               "url": "https://hoppico.in",
-              "logo": "https://hoppico.in/logo2022.png",
+              "logo": "https://hoppico.in/favicon.ico.png",
               "image": [
                 "https://hoppico.in/office-exterior.jpg",
                 "https://hoppico.in/team-photo.jpg",
