@@ -94,11 +94,12 @@ export default function AboutHero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative w-full px-4 sm:px-6 py-8 sm:py-12 lg:py-16"
+        className="relative w-full px-4 sm:px-6 py-8 sm:py-12 lg:py-16 bg-white/80 backdrop-blur-sm"
+
       >
         <motion.div
           variants={itemVariants}
-          className="relative bg-white/70 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-12 shadow-lg sm:shadow-2xl border border-white/60 overflow-hidden max-w-6xl mx-auto"
+          className="relative bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-12 shadow-lg sm:shadow-2xl border border-slate-200/50 overflow-hidden max-w-6xl mx-auto"
           whileHover={{ scale: 1.01 }}
           transition={{ duration: 0.3 }}
         >

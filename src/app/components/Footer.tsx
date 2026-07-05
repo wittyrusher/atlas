@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
-import { X, ExternalLink, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Heart } from 'lucide-react';
+import { ExternalLink, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Heart } from 'lucide-react';
+import TermsAndConditions from '@/app/components/TermsAndConditions';
 
 export default function Footer() {
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
@@ -92,8 +93,8 @@ export default function Footer() {
                   </div>
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wide">Phone</p>
-                    <a href="tel:+917410147344" className="text-sm text-gray-300 hover:text-[#f5c624] transition-colors">
-                      +91 7410147344
+                    <a href="tel:+918805948784" className="text-sm text-gray-300 hover:text-[#f5c624] transition-colors">
+                      +91 8805948784
                     </a>
                   </div>
                 </div>
@@ -173,209 +174,8 @@ export default function Footer() {
         </div>
       </footer>
 
-      {/* Privacy Policy Modal - Enhanced */}
-      {showPrivacyModal && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="bg-white max-w-4xl w-full max-h-[90vh] overflow-hidden rounded-2xl shadow-2xl">
-            {/* Modal Header - Enhanced */}
-            <div className="flex justify-between items-center p-6 border-b bg-gradient-to-r from-[#03263a] to-[#024c68] text-white">
-              <div>
-                <h2 className="text-2xl font-bold">Privacy Policy & Terms of Service</h2>
-                <p className="text-sm text-[#f5c624] mt-1">Hoppico - Your trust is our priority</p>
-              </div>
-              <button
-                onClick={closePrivacyModal}
-                className="text-gray-300 hover:text-white hover:bg-white/10 p-2 rounded-xl transition-all"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
-
-            {/* Modal Content - Enhanced */}
-            <div className="p-6 overflow-y-auto max-h-[calc(90vh-140px)] text-gray-800">
-
-              <div className="bg-[#f5c624]/10 border border-[#f5c624]/20 rounded-lg p-4 mb-6">
-                <p className="text-sm"><strong>Last Updated:</strong> June 2025</p>
-              </div>
-
-              <div className="space-y-6">
-                <section>
-                  <h2 className="text-2xl font-bold text-[#03263a] mb-4 border-b-2 border-[#f5c624] pb-2">PRIVACY POLICY</h2>
-
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-lg font-semibold text-[#03263a] mb-2">Information We Collect</h3>
-
-                      <div className="bg-gray-50 rounded-lg p-4 mb-3">
-                        <p className="font-medium text-[#03263a] mb-2">Personal Information:</p>
-                        <ul className="space-y-1 text-sm text-gray-700 ml-4">
-                          <li>• Full name, date of birth, and contact details</li>
-                          <li>• Passport and travel document information</li>
-                          <li>• Payment and billing information</li>
-                          <li>• Emergency contact details</li>
-                          <li>• Dietary restrictions and accessibility needs</li>
-                          <li>• Travel preferences and booking history</li>
-                        </ul>
-                      </div>
-
-                      <div className="bg-gray-50 rounded-lg p-4">
-                        <p className="font-medium text-[#03263a] mb-2">Automatic Information:</p>
-                        <ul className="space-y-1 text-sm text-gray-700 ml-4">
-                          <li>• Website usage data and cookies</li>
-                          <li>• Device information and IP addresses</li>
-                          <li>• Location data when using our mobile services</li>
-                          <li>• Communication records with our staff</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div>
-                      <h3 className="text-lg font-semibold text-[#03263a] mb-2">How We Use Your Information</h3>
-                      <p className="text-sm text-gray-700 mb-2">We use your personal information to:</p>
-                      <ul className="space-y-1 text-sm text-gray-700 ml-4 bg-gray-50 rounded-lg p-4">
-                        <li>• Process and manage your travel bookings</li>
-                        <li>• Provide customer support and communicate important updates</li>
-                        <li>• Comply with legal requirements and travel regulations</li>
-                        <li>• Share necessary details with airlines, hotels, and tour operators</li>
-                        <li>• Send promotional materials (with your consent)</li>
-                        <li>• Improve our services through analytics</li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h3 className="text-lg font-semibold text-[#03263a] mb-2">Information Sharing</h3>
-                      <p className="text-sm text-gray-700 mb-2">We may share your information with:</p>
-                      <ul className="space-y-1 text-sm text-gray-700 ml-4 bg-gray-50 rounded-lg p-4">
-                        <li>• <strong>Travel suppliers</strong> (airlines, hotels, tour operators) to fulfill bookings</li>
-                        <li>• <strong>Payment processors</strong> for secure transaction processing</li>
-                        <li>• <strong>Government authorities</strong> when required by law</li>
-                        <li>• <strong>Emergency services</strong> if safety concerns arise during travel</li>
-                      </ul>
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-3 mt-3">
-                        <p className="text-sm text-red-800">We do <strong>NOT</strong> sell your personal information to third parties for marketing purposes.</p>
-                      </div>
-                    </div>
-
-                    <div>
-                      <h3 className="text-lg font-semibold text-[#03263a] mb-2">Your Rights</h3>
-                      <p className="text-sm text-gray-700 mb-2">You have the right to:</p>
-                      <ul className="space-y-1 text-sm text-gray-700 ml-4 bg-gray-50 rounded-lg p-4">
-                        <li>• Access and review your personal information</li>
-                        <li>• Request corrections to inaccurate data</li>
-                        <li>• Delete your account and associated data</li>
-                        <li>• Opt-out of marketing communications</li>
-                        <li>• File complaints with relevant data protection authorities</li>
-                      </ul>
-                    </div>
-                  </div>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-bold text-[#03263a] mb-4 border-b-2 border-[#f5c624] pb-2">TERMS OF SERVICE & CANCELLATION POLICY</h2>
-
-                  <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-4">
-                    <h3 className="text-lg font-bold text-red-800 mb-2">STRICT CANCELLATION POLICY</h3>
-                    <p className="text-sm text-red-700">
-                      <strong>IMPORTANT: Our cancellation policy is firm and non-negotiable. Please read carefully before booking.</strong>
-                    </p>
-                  </div>
-
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <p className="font-medium text-[#03263a] mb-3">Cancellation Fees by Timeline:</p>
-                    <ul className="space-y-2 text-sm text-gray-700">
-                      <li className="flex justify-between p-2 bg-white rounded border-l-4 border-green-400">
-                        <span><strong>More than 90 days before departure:</strong></span>
-                        <span className="text-green-600 font-semibold">25% of total booking value</span>
-                      </li>
-                      <li className="flex justify-between p-2 bg-white rounded border-l-4 border-yellow-400">
-                        <span><strong>61-90 days before departure:</strong></span>
-                        <span className="text-yellow-600 font-semibold">50% of total booking value</span>
-                      </li>
-                      <li className="flex justify-between p-2 bg-white rounded border-l-4 border-orange-400">
-                        <span><strong>31-60 days before departure:</strong></span>
-                        <span className="text-orange-600 font-semibold">75% of total booking value</span>
-                      </li>
-                      <li className="flex justify-between p-2 bg-white rounded border-l-4 border-red-400">
-                        <span><strong>15-30 days before departure:</strong></span>
-                        <span className="text-red-600 font-semibold">90% of total booking value</span>
-                      </li>
-                      <li className="flex justify-between p-2 bg-white rounded border-l-4 border-red-600">
-                        <span><strong>Less than 15 days before departure:</strong></span>
-                        <span className="text-red-700 font-bold">100% (NO REFUND)</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="mt-6">
-                    <h3 className="text-lg font-semibold text-[#03263a] mb-3">Women&apos;s Safety & Security</h3>
-                    <div className="bg-pink-50 border border-pink-200 rounded-lg p-4">
-                      <p className="font-medium text-[#03263a] mb-2">Our Commitment:</p>
-                      <ul className="space-y-1 text-sm text-gray-700 ml-4">
-                        <li>• Vetted and background-verified male guides and drivers</li>
-                        <li>• Female escort available for solo women travelers upon request</li>
-                        <li>• Verified accommodation partners with proper security measures</li>
-                        <li>• 24/7 emergency helpline with female staff availability</li>
-                        <li>• Regular safety briefings for all ground staff</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="mt-6">
-                    <h3 className="text-lg font-semibold text-[#03263a] mb-3">Travel Insurance</h3>
-                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                      <p className="text-sm text-blue-800 mb-2">
-                        <strong>HIGHLY RECOMMENDED:</strong> We strongly recommend purchasing comprehensive travel insurance.
-                      </p>
-                      <p className="text-sm text-blue-700">
-                        <strong>Mandatory Insurance:</strong> All bookings over ₹4,00,000 per person require proof of comprehensive travel insurance before final documentation will be issued.
-                      </p>
-                    </div>
-                  </div>
-                </section>
-
-                <section className="border-t pt-6">
-                  <h2 className="text-xl font-bold text-[#03263a] mb-4">Contact Information</h2>
-                  <div className="grid md:grid-cols-3 gap-4">
-                    <div className="bg-gray-50 rounded-lg p-4 text-center">
-                      <Mail className="w-6 h-6 text-[#f5c624] mx-auto mb-2" />
-                      <p className="text-xs text-gray-500 uppercase tracking-wide">Email</p>
-                      <p className="text-sm font-medium">thehoppico@gmail.com</p>
-                    </div>
-                    <div className="bg-gray-50 rounded-lg p-4 text-center">
-                      <Phone className="w-6 h-6 text-[#f5c624] mx-auto mb-2" />
-                      <p className="text-xs text-gray-500 uppercase tracking-wide">Phone</p>
-                      <p className="text-sm font-medium">+91 7410147344</p>
-                    </div>
-                    <div className="bg-gray-50 rounded-lg p-4 text-center">
-                      <MapPin className="w-6 h-6 text-[#f5c624] mx-auto mb-2" />
-                      <p className="text-xs text-gray-500 uppercase tracking-wide">Address</p>
-                      <p className="text-sm font-medium text-center">
-                        885, Bhandarkar Rd, Deccan Gymkhana<br />
-                        Pune, Maharashtra 411004
-                      </p>
-                    </div>
-                  </div>
-                </section>
-
-                <div className="bg-[#03263a] text-white rounded-lg p-6 text-center">
-                  <p className="font-semibold mb-2">By booking with us, you acknowledge that you have read, understood, and agree to these terms.</p>
-                  <p className="text-[#f5c624] font-bold">REMEMBER: Our cancellation policy is strict and non-negotiable. Please ensure you are committed to your travel dates before booking.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Modal Footer - Enhanced */}
-            <div className="border-t bg-gray-50 p-4 flex justify-end">
-              <button
-                onClick={closePrivacyModal}
-                className="px-6 py-2 bg-gradient-to-r from-[#03263a] to-[#024c68] text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Privacy Policy & Terms - opens as full-page overlay on the current page */}
+      {showPrivacyModal && <TermsAndConditions onClose={closePrivacyModal} />}
     </>
   );
 }

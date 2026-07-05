@@ -8,7 +8,7 @@ const ServicesHeader = () => {
         Hoppico Services
       </h2>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        From custom group adventures to wellness retreats, discover travel experiences crafted with passion and precision for every kind of explorer
+        From <span className="font-bold">custom group adventures</span> to <span className="font-bold">wellness retreats</span>, discover travel experiences crafted with <span className="font-bold">passion and precision</span> for every kind of explorer
       </p>
       <div className="flex items-center justify-center gap-2 mt-4">
         <div className="flex text-yellow-400">
@@ -16,7 +16,7 @@ const ServicesHeader = () => {
             <Star key={i} className="w-5 h-5 fill-current" />
           ))}
         </div>
-        <span className="text-gray-600 font-medium">4.8 • 15,000+ Happy Travelers</span>
+        <span className="text-gray-600 font-medium"><span className="font-bold">4.8</span> • <span className="font-bold">15,000+ Happy Travelers</span></span>
       </div>
     </div>
   );
